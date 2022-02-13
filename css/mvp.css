@@ -78,7 +78,11 @@ section {
     justify-content: var(--justify-important);
 }
 
-section img,
+section img{
+    max-width: 100%;
+    height: 50px;
+}
+
 article img {
     max-width: 100%;
 }
