@@ -110,38 +110,38 @@ function MicAccessTool(o) {
 				}
 			},
         en: {
-            btn_open: "accessibility menu",
-            btn_close: "close",
-            keyboard_root: "keyboard navigation",
-            disable_animattions: "block animations",
-            access_declaration: "accessibility statement",
-            debug_contacts: "report an accessibility problem",
-            reset_all_settings: "reset settings",
-            image_without_alt: "image without text",
-            contrast_block: {
-                header: "color contrast",
-                btn_monochrome: "uncolored<br>display",
-                btn_bright: "bright<br>contrast",
-                btn_invert: "reverse<br>contrast"
-            },
-            text_block: {
-                header: "text size",
-                btn_font_up: "increase<br>text",
-                btn_font_down: "decrease<br>text",
-                btn_font_readable: "readable<br>text"
-            },
-            content_block: {
-                header: "highlighting content",
-                btn_underline_links: "underline<br>links",
-                btn_underline_headers: "underline<br>headers",
-                btn_images_titles: "images<br>titles"
-            },
-            zoom_block: {
-                header: "zoom in",
-                btn_cursor_white: "big white<br>cursor",
-                btn_cursor_black: "big black<br>cursor",
-                btn_zoom_in: "zoom<br>screen"
-            }
+            btn_open: "menu de acessibilidade",
+			btn_close: "fechar",
+			keyboard_root: "navegação por teclado",
+			disable_animations: "bloquear animações",
+			access_declaration: "declaração de acessibilidade",
+			debug_contacts: "reportar um problema de acessibilidade",
+			reset_all_settings: "redefinir configurações",
+			image_without_alt: "imagem sem texto",
+			contrast_block: {
+			header: "contraste de cores",
+			btn_monochrome: "exibição<br>sem cores",
+			btn_bright: "contraste<br>brilhante",
+			btn_invert: "contraste<br>invertido"
+			},
+			text_block: {
+			header: "tamanho do texto",
+			btn_font_up: "aumentar<br>texto",
+			btn_font_down: "diminuir<br>texto",
+			btn_font_readable: "texto<br>legível"
+			},
+			content_block: {
+			header: "destacar conteúdo",
+			btn_underline_links: "sublinhar<br>links",
+			btn_underline_headers: "sublinhar<br>cabeçalhos",
+			btn_images_titles: "títulos<br>de imagens"
+			},
+			zoom_block: {
+			header: "zoom in",
+			btn_cursor_white: "cursor<br>branco grande",
+			btn_cursor_black: "cursor<br>preto grande",
+			btn_zoom_in: "ampliar<br>tela"
+				}
         }
     }, this.currentLanguage = this.locale[this.init.forceLang] || this.locale.en, this.checkLanguageBox(), this.buildToolBox(), this.toolBox = document.getElementById("mic-access-tool-box"), this.toolBoxOpenButton = document.getElementById("mic-access-tool-general-button"), this.toolBoxCloseButton = document.getElementById("mic-access-tool-box-close-button"), this.toolBoxOpenButton.addEventListener("click", this.openBox.bind(this)), this.toolBoxCloseButton.addEventListener("click", this.closeBox.bind(this)), document.addEventListener("keyup", this.openCloseBoxKeyboard.bind(this)), this.micContrastMonochrome = document.getElementById("mic-toolbox-contrast-monochrome"), this.micContrastSoft = document.getElementById("mic-toolbox-contrast-soft"), this.micContrastHard = document.getElementById("mic-toolbox-contrast-hard"), this.micContrastMonochrome.addEventListener("click", this.contrastChange), this.micContrastSoft.addEventListener("click", this.contrastChange), this.micContrastHard.addEventListener("click", this.contrastChange), this.micDisableButtonsAnimations = document.getElementById("mic-toolbox-disable-buttons-animations"), this.micDisableButtonsKeyboard = document.getElementById("mic-toolbox-disable-buttons-keyboard"), this.micDisableButtonsAnimations.addEventListener("click", this.onceButtonChange), this.micDisableButtonsKeyboard.addEventListener("click", this.onceButtonChange), this.micToolboxFontsUp = document.getElementById("mic-toolbox-fonts-up"), this.micToolboxFontsDown = document.getElementById("mic-toolbox-fonts-down"), this.micToolboxFontsSimple = document.getElementById("mic-toolbox-fonts-simple"), this.micToolboxFontsUp.addEventListener("click", this.fontsChange), this.micToolboxFontsDown.addEventListener("click", this.fontsChange), this.micToolboxFontsSimple.addEventListener("click", this.onceButtonChange), this.micToolboxContentLinks = document.getElementById("mic-toolbox-content-links"), this.micToolboxContentHeaders = document.getElementById("mic-toolbox-content-headers"), this.micToolboxContentImages = document.getElementById("mic-toolbox-content-images"), this.micToolboxContentLinks.addEventListener("click", this.onceButtonChange), this.micToolboxContentHeaders.addEventListener("click", this.onceButtonChange), this.micToolboxContentImages.addEventListener("click", this.onceButtonChange), this.micToolboxCursorWhite = document.getElementById("mic-toolbox-cursor-big-white"), this.micToolboxCursorBlack = document.getElementById("mic-toolbox-cursor-big-black"), this.micToolboxZoomUp = document.getElementById("mic-toolbox-zoom-up"), this.micToolboxCursorWhite.addEventListener("click", this.cursorChange), this.micToolboxCursorBlack.addEventListener("click", this.cursorChange), this.micToolboxZoomUp.addEventListener("click", this.onceButtonChange), this.micToolboxDisableButtonsAll = document.getElementById("mic-toolbox-disable-buttons-reset-all"), this.micToolboxDisableButtonsAll.addEventListener("click", this.resetApp.bind(this)), this.initialApp()
 }
