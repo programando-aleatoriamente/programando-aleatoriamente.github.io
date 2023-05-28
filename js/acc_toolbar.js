@@ -109,7 +109,7 @@ function MicAccessTool(o) {
                 btn_zoom_in: "zoom<br>screen"
             }
         },
-        pt_BR: {
+        "pt_BR": {
 			btn_open: "menu de acessibilidade",
 			btn_close: "fechar",
 			keyboard_root: "navegação por teclado",
