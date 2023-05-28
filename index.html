@@ -55,6 +55,19 @@
       <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
       </script>
+      <script src="/js/acc_toolbar.js"></script>
+      // optional init
+      <script>
+        window.onload = function() {
+          window.micAccessTool = new MicAccessTool({
+            link: 'http://your-awesome-website.com/your-accessibility-declaration.pdf',
+            contact: 'mailto:your-mail@your-awesome-website.com',
+            buttonPosition: 
+            forceLang: 'pt-BR'
+          });
+        }
+      </script>
+      
 
 
     <footer>
