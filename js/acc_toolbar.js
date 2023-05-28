@@ -75,7 +75,7 @@ function MicAccessTool(o) {
                 btn_zoom_in: "увелич. дисплея"
             }
         }, 
-        "pt_BR": {
+        "pt-BR": {
 			btn_open: "menu de acessibilidade",
 			btn_close: "fechar",
 			keyboard_root: "navegação por teclado",
