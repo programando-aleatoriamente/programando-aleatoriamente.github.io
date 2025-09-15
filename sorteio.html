@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorteio de Números</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .numeros {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .numero {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 1.5em;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .numero:hover {
+      transform: scale(1.1);
+    }
+
+    button {
+      background-color: #ffffff;
+      color: #0077cc;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e0e0e0;
+    }
+
+    @media (max-width: 500px) {
+      .numero {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 1.2em;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Números Sorteados</h1>
+  <div class="numeros" id="resultado"></div>
+  <button onclick="sortearNumeros()">Sortear Novamente</button>
+
+  <script>
+    function sortearNumeros() {
+      const resultado = document.getElementById("resultado");
+      resultado.innerHTML = ""; // Limpa os números anteriores
+
+      const numeros = new Set();
+      while (numeros.size < 6) {
+        const num = Math.floor(Math.random() * 60) + 1;
+        numeros.add(num);
+      }
+
+      [...numeros].sort((a, b) => a - b).forEach(num => {
+        const div = document.createElement("div");
+        div.className = "numero";
+        div.textContent = num;
+        resultado.appendChild(div);
+      });
+    }
+
+    
+    sortearNumeros();
+  </script>
+
+</body>
+</html>
